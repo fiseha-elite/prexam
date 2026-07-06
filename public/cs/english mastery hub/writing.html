@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Writing Hub | Home of Elites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #3b82f6;
+            --accent: #f59e0b;
+            --bg: #fdfdfd;
+            --text-dark: #0f172a;
+            --text-light: #475569;
+            --white: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * { box-sizing: border-box; transition: all 0.2s ease-in-out; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+        }
+
+        /* Hero Section */
+        .header-section {
+            grid-column: 1 / -1;
+            padding: 60px 0 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-section h1 {
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            margin: 0;
+            color: var(--text-dark);
+        }
+
+        /* Main Content */
+        .main-content section {
+            margin-bottom: 60px;
+        }
+
+        .step-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 35px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-number {
+            font-weight: 900;
+            font-size: 4rem;
+            color: #f1f5f9;
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            z-index: 0;
+        }
+
+        .step-content { position: relative; z-index: 1; }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        /* Sidebar Widgets */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .widget {
+            background: #1e293b;
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+        }
+
+        .widget h4 { color: var(--accent); margin-top: 0; }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        /* Buttons */
+        .cta-btn {
+            display: block;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .cta-btn:hover { background: var(--secondary); transform: scale(1.02); }
+
+        /* Mobile Layout */
+        @media (max-width: 900px) {
+            .container { grid-template-columns: 1fr; }
+            .sidebar { order: -1; }
+            .header-section { padding: 40px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-section">
+        <div class="tag" style="background: var(--accent)">Elite Academic Standards</div>
+        <h1>Mastering The Essay</h1>
+        <p style="font-size: 1.2rem; color: var(--text-light)">From blank page to brilliant submission.</p>
+    </div>
+
+    <div class="main-content">
+        <!-- Section 1 -->
+        <section id="planning">
+            <div class="step-card">
+                <span class="step-number">01</span>
+                <div class="step-content">
+                    <div class="tag">Phase 1</div>
+                    <h3>Strategic Planning</h3>
+                    <p>Before you type a single word, you must deconstruct the prompt. What is the professor actually asking? Identify your <strong>Thesis Statement</strong>—the backbone of your entire paper.</p>
+                    <a href="#" class="cta-btn">View Thesis Workshop</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="drafting">
+            <div class="step-card">
+                <span class="step-number">02</span>
+                <div class="step-content">
+                    <div class="tag">Phase 2</div>
+                    <h3>The Drafting Architecture</h3>
+                    <p>Use the "PEEL" method for every paragraph to ensure maximum clarity and impact:</p>
+                    <ul style="color: var(--text-light)">
+                        <li><strong>P:</strong> Point (The main idea)</li>
+                        <li><strong>E:</strong> Evidence (Facts/Quotes)</li>
+                        <li><strong>E:</strong> Explanation (Why it matters)</li>
+                        <li><strong>L:</strong> Link (Transition to next point)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="citations">
+            <div class="step-card">
+                <span class="step-number">03</span>
+                <div class="step-content">
+                    <div class="tag">Phase 3</div>
+                    <h3>Ethical Citation</h3>
+                    <p>Integrity is the mark of an elite student. Master APA, MLA, and Chicago styles to credit your sources and avoid plagiarism.</p>
+                    <a href="#" class="cta-btn" style="background: #64748b;">Citation Style Guides</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="sidebar">
+        <div class="widget">
+            <h4>✅ Submission Checklist</h4>
+            <div class="checklist-item"><span>▢</span> No "I" or "Me" (Objective)</div>
+            <div class="checklist-item"><span>▢</span> Strong Thesis Statement</div>
+            <div class="checklist-item"><span>▢</span> Transitions between paras</div>
+            <div class="checklist-item"><span>▢</span> References in Alpha-order</div>
+        </div>
+
+        <div class="widget" style="background: var(--white); border: 1px solid var(--border); color: var(--text-dark);">
+            <h4>📂 Writing Templates</h4>
+            <p style="font-size: 0.85rem; color: var(--text-light)">Download pre-formatted Word docs.</p>
+            <a href="#" style="color: var(--primary); font-weight: 700; text-decoration: none;">Standard Essay Template →</a><br><br>
+            <a href="#" style="color: var(--primary); font-weight: 700; text-decoration: none;">Case Study Layout →</a>
+        </div>
+    </div>
+</div>
+
+<footer style="text-align: center; padding: 40px; color: var(--text-light); font-size: 0.9rem;">
+    <a href="English.html" style="color: var(--primary); text-decoration: none;">← Return to Main Hub</a>
+</footer>
+
+</body>
+</html>

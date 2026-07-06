@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prexam-Elites | Professional Student Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<!-- Live Professional Updates Banner -->
+<div class="announcement-ticker">
+    <div class="ticker-wrap">
+        📢 Update: New 2026 Freshman Exam Papers uploaded for BDU, AAU & ASTU! Check out the Exam Prep Module. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🚀 Tip: Master C++ via our structured Notes section.
+    </div>
+</div>
+
+<header>
+    <h1>Home of Elites</h1>
+    <h2>Empowering Students, Shaping Futures</h2>
+</header>
+
+<div class="container">
+    <!-- Perfect Object Frame: Guarantees 0% cut off line regardless of viewport width -->
+    <div class="img-hero-container">
+        <div class="img-hero-blur-bg"></div>
+        <img class="img-hero" src="fish.jpg" alt="Study Success Framework Photo">
+    </div>
+
+    <!-- Quick Access Actions Bar -->
+    <div class="quick-utility-bar">
+        <span>Quick Access Tools:</span>
+        <div class="utility-pills">
+            <span class="pill" onclick="alert('Bookmark added! Press Ctrl+D to complete.')">🔖 Save Hub</span>
+            <span class="pill" onclick="document.body.style.fontSize='18px'">A+ Text</span>
+        </div>
+    </div>
+
+    <!-- Analytics Dashboard Counters -->
+    <div class="stats-bar">
+        <div class="stat-item"><b>500+</b><span>Curated Notes</span></div>
+        <div class="stat-item"><b>100+</b><span>Past Papers</span></div>
+        <div class="stat-item"><b>24/7</b><span>Peer Support</span></div>
+    </div>
+
+    <!-- Overview Statement Card -->
+    <div class="card">
+        <h2>Welcome, Scholar!</h2>
+        <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0;">Step into a smarter way of learning. We provide the tools; you provide the ambition.</p>
+        
+        <ul class="feature-list">
+            <li>High-quality materials</li>
+            <li>Structured quizzes</li>
+            <li>Freshman support</li>
+            <li>Academic insights</li>
+        </ul>
+    </div>
+
+    <!-- Dynamic Filter Search Module -->
+    <div class="search-container">
+        <div class="search-box">
+            <span style="margin-right: 8px;">🔍</span>
+            <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search tools, notes, or calculators...">
+        </div>
+    </div>
+
+    <!-- Links Matrix Area -->
+    <div class="grid">
+        <a href="freshman resourses/fresh.html" class="grid-item">
+            <span class="icon">📚</span>
+            Freshman Notes
+        </a>
+        <a href="exam.html" class="grid-item">
+            <span class="icon">📝</span>
+            Exam Prep
+        </a>
+        <a href="english mastery hub/English.html" class="grid-item">
+            <span class="icon">🌍</span>
+            English Mastery
+        </a>
+        <a href="cs/Tech-dep.html" class="grid-item">
+            <span class="icon">💻</span>
+            Tech Dep Info
+        </a>
+        <a href="gpa.html" class="grid-item" style="grid-column: span 2;">
+            <span class="icon">📊</span>
+            GPA Calculator
+        </a>
+    </div>
+
+    <!-- Social Broadcast Trigger Action -->
+    <a href="https://www.youtube.com/@preXamelite09" class="youtube-btn">
+        <span style="margin-right: 10px; font-size: 18px;">📺</span> Subscribe to preXam Elite Channel
+    </a>
+
+    <!-- Social Proof and Validation Component -->
+    <div class="spotlight-card">
+        <h4>Community Spotlight 🏆</h4>
+        <p>"The single most organized archive for Ethiopian freshman engineering tracking. Saved my GPA during midterms!" — First Year Student, BDU</p>
+    </div>
+
+    <!-- Professional Multi-Column Footer Grid -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Quick Tracks</h4>
+                <a href="freshman resourses/fresh.html">Resource Index</a>
+                <a href="exam.html">MoE Past Exams</a>
+                <a href="gpa.html">GPA Tracker Matrix</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <a href="https://www.youtube.com/@preXamelite09">YouTube Channel</a>
+                <a href="https://t.me/fiseha70">Telegram Helpdesk</a>
+                <a href="#">Report Bug / Missing Asset</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            © 2026 Home of Elites Institute. All Rights Reserved.<br>
+            Engineered with pride by <a href="https://t.me/fiseha70" class="dev-tag">Fiseha Belete </a>(BDU Pre-Engineering Freshman)
+        </div>
+    </footer>
+</div>
+
+<script>
+function searchFunction() {
+    var input = document.getElementById("myInput");
+    var filter = input.value.toUpperCase();
+    var grid = document.querySelector(".grid");
+    var items = grid.getElementsByClassName("grid-item");
+
+    for (var i = 0; i < items.length; i++) {
+        var textValue = items[i].textContent || items[i].innerText;
+        if (textValue.toUpperCase().indexOf(filter) > -1) {
+            items[i].style.display = "flex";
+        } else {
+            items[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>

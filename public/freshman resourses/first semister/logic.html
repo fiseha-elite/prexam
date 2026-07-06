@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic & Critical Thinking Portal | preXam Elite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f766e; /* Analytical Deep Teal/Emerald */
+            --accent: #0284c7;  /* Structural Blue */
+            --bg: #fdfdfd;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-btn {
+            background-color: #ffffff;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: 0.2s;
+        }
+
+        .back-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+        .hero-card {
+            background: linear-gradient(135deg, #0f172a, #0f766e);
+            padding: 30px 40px;
+            border-radius: 24px;
+            color: white;
+            box-shadow: 0 20px 25px -5px rgba(15, 118, 110, 0.2);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card h1 { margin: 0 0 10px 0; font-size: 32px; }
+        .hero-card p { margin: 0; opacity: 0.85; line-height: 1.6; max-width: 600px; }
+
+        /* Workspace split */
+        .portal-workspace {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 850px) {
+            .portal-workspace {
+                grid-template-columns: 420px 1fr;
+            }
+        }
+
+        .resource-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .subject-card {
+            background: white;
+            padding: 16px;
+            border-radius: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border: 2px solid #f1f5f9;
+            transition: all 0.2s ease;
+        }
+
+        .subject-card:hover, .subject-card.active {
+            border-color: var(--primary);
+            background: #ccfbf1;
+        }
+
+        .icon-box {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .subject-info h3 { margin: 0; font-size: 15px; color: #0f172a; }
+        .subject-info span { font-size: 12px; color: #64748b; display: block; margin-top: 2px; }
+
+        /* Secure Viewer Panel */
+        .viewer-panel {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 15px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            min-height: 650px;
+        }
+
+        .viewer-header {
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #f1f5f9;
+            font-weight: 600;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .viewer-wrapper {
+            position: relative;
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f8fafc;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 580px;
+            border: none;
+        }
+
+        /* Overlay to protect Google Pop-out icon */
+        .secure-shield {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 55px;
+            background: transparent;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="../first.html" class="back-btn">← Portal Home</a>
+
+    <div class="hero-card">
+        <h1>Logic & Critical Thinking ⚖️</h1>
+        <p>Select a chapter below to securely view material on argument evaluation, cognitive biases, semantic fallacies, and deductive frameworks.</p>
+    </div>
+
+    <div class="portal-workspace">
+        
+        <!-- Sidebar Navigation Grid (Logic Chapters 1-5) -->
+        <div class="resource-grid">
+            
+            <div class="subject-card active" onclick="loadDocument('Chapter 1: Logic and Philosophy', '1OwjUZ3VTAGFaEfrTGrNaF9M-naRNuD6T', this)">
+                <div class="icon-box" style="background: #ccfbf1; color: #0f766e;">CH 1</div>
+                <div class="subject-info">
+                    <h3>Chapter 1: Philosophy & Logic</h3>
+                    <span>Core Branches, Benefits of Logic & Meaning of Arguments</span>
+                </div>
+            </div>
+
+            <div class="subject-card" onclick="loadDocument('Chapter 2: Critical Thinking Skills', '1OwjUZ3VTAGFaEfrTGrNaF9M-naRNuD6T', this)">
+                <div class="icon-box" style="background: #e0f2fe; color: #0369a1;">CH 2</div>
+                <div class="subject-info">
+                    <h3>Chapter 2: Critical Thinking</h3>
+                    <span>Standards, Barriers, Dispositions & Cognitive Biases</span>
+                </div>
+            </div>
+
+            <div class="subject-card" onclick="loadDocument('Chapter 3: Language and Definitions', '1OwjUZ3VTAGFaEfrTGrNaF9M-naRNuD6T', this)">
+                <div class="icon-box" style="background: #fef3c7; color: #b45309;">CH 3</div>
+                <div class="subject-info">
+                    <h3>Chapter 3: Language & Definitions</h3>
+                    <span>Cognitive vs. Emotive Meaning, Disputes & Definition Types</span>
+                </div>
+            </div>
+
+            <div class="subject-card" onclick="loadDocument('Chapter 4: Informal Fallacies', '1OwjUZ3VTAGFaEfrTGrNaF9M-naRNuD6T', this)">
+                <div class="icon-box" style="background: #fee2e2; color: #991b1b;">CH 4</div>
+                <div class="subject-info">
+                    <h3>Chapter 4: Informal Fallacies</h3>
+                    <span>Fallacies of Relevance, Induction, Presumption & Ambiguity</span>
+                </div>
+            </div>
+
+            <div class="subject-card" onclick="loadDocument('Chapter 5: Categorical and Propositional Logic', '1OwjUZ3VTAGFaEfrTGrNaF9M-naRNuD6T', this)">
+                <div class="icon-box" style="background: #f3e8ff; color: #6b21a8;">CH 5</div>
+                <div class="subject-info">
+                    <h3>Chapter 5: Deductive Frameworks</h3>
+                    <span>Categorical Propositions, Syllogisms & Truth Tables</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Secure Integrated Viewer -->
+        <div class="viewer-panel">
+            <div class="viewer-header">
+                <span id="current-subject-title">Chapter 1: Philosophy & Logic</span>
+                <span style="font-size: 12px; color: #0f766e; background: #ccfbf1; padding: 4px 8px; border-radius: 6px;">🔒 Secure Preview</span>
+            </div>
+            <div class="viewer-wrapper">
+                <div class="secure-shield"></div>
+                <iframe id="secure-driver-frame" src="https://drive.google.com/file/d/1OwjUZ3VTAGFaEfrTGrNaF9M-naRNuD6T/preview" allow="autoplay"></iframe>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function loadDocument(subjectTitle, fileId, element) {
+        // Update Title text above reader
+        document.getElementById('current-subject-title').innerText = subjectTitle;
+        
+        // Target the iframe and load the clean embedded preview layout
+        const iframe = document.getElementById('secure-driver-frame');
+        iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+
+        // Manage active styling on side buttons
+        document.querySelectorAll('.subject-card').forEach(card => card.classList.remove('active'));
+        element.classList.add('active');
+    }
+</script>
+
+</body>
+</html>

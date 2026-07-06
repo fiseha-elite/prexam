@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punctuation Mastery | Home of Elites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --success: #10b981;
+            --error: #ef4444;
+            --bg: #fafafa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #1e293b;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            padding: 20px;
+            background: var(--white);
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .rule-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-left: 6px solid var(--primary);
+        }
+
+        .example-box {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .wrong { background: #fee2e2; border-left: 4px solid var(--error); color: #991b1b; margin-bottom: 10px; }
+        .right { background: #d1fae5; border-left: 4px solid var(--success); color: #065f46; }
+
+        .label {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Practice Area */
+        .practice-zone {
+            background: #1e293b;
+            color: white;
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .quiz-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            color: white;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .btn-check {
+            background: var(--success);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 20px auto; }
+            .rule-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="../grammar.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">← Exit Lesson</a>
+    <span style="font-size: 0.9rem; font-weight: 700;">Topic: The Semicolon (;)</span>
+</div>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1>The Semicolon Masterclass</h1>
+        <p>It’s not just a comma with a hat. It’s a tool for connecting powerful ideas.</p>
+    </div>
+
+    <!-- Rule 1 -->
+    <div class="rule-card">
+        <h3>Rule #1: Connecting Independent Clauses</h3>
+        <p>Use a semicolon to join two complete sentences that are closely related in thought. <strong>Never</strong> use it if one side isn't a full sentence.</p>
+        
+        <div class="example-box wrong">
+            <span class="label">❌ The Amateur</span>
+            I love studying English, it is my favorite subject. (This is a Comma Splice)
+        </div>
+        
+        <div class="example-box right">
+            <span class="label">✅ The Elite</span>
+            I love studying English; it is my favorite subject.
+        </div>
+    </div>
+
+    <!-- Rule 2 -->
+    <div class="rule-card" style="border-left-color: #f59e0b;">
+        <h3>Rule #2: The Complex List</h3>
+        <p>When list items already contain commas, use semicolons to separate the groups so the reader doesn't get lost.</p>
+        
+        <div class="example-box right" style="background: #fffbeb; color: #92400e; border-left-color: #f59e0b;">
+            <span class="label">✅ Pro Example</span>
+            I have lived in Paris, France; Tokyo, Japan; and London, England.
+        </div>
+    </div>
+
+    <!-- Interactive Practice -->
+    <div class="practice-zone">
+        <h2>Quick Check</h2>
+        <p>Fix this sentence: "The sun was setting, the air grew cold."</p>
+        <input type="text" class="quiz-input" placeholder="Type the corrected version here...">
+        <button class="btn-check" onclick="alert('Great job! You replaced the comma with a semicolon.')">Check Answer</button>
+    </div>
+
+</div>
+
+<footer style="text-align: center; padding: 40px; color: #64748b; font-size: 0.8rem;">
+    Progress: 25% Complete
+</footer>
+
+</body>
+</html>

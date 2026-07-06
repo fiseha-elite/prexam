@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grammar Lab | Home of Elites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --primary-light: #f4f0ff;
+            --accent: #10b981;
+            --bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --white: #ffffff;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        header {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        /* Progress Bar for Gamification */
+        .status-bar {
+            background: var(--white);
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        /* Grid Layout */
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .lesson-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+            border: 1px solid #f1f5f9;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Table */
+        .table-container {
+            overflow-x: auto;
+            background: var(--white);
+            border-radius: 20px;
+            margin-top: 40px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 500px;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px;
+            color: var(--text-muted);
+            border-bottom: 2px solid var(--bg);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid var(--bg);
+        }
+
+        .correction {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover { opacity: 0.9; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .status-bar { flex-direction: column; gap: 10px; border-radius: 20px; }
+            .lesson-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <a href="English.html" class="back-link">← Back to Mastery Hub</a>
+        <h1>The Grammar Lab</h1>
+        <p style="color: var(--text-muted)">Precision is the hallmark of an elite student.</p>
+    </header>
+
+    <div class="status-bar">
+        <span>Current Topic: <strong>Punctuation Mastery</strong></span>
+        <span class="badge">Level 1 / 5</span>
+    </div>
+
+    <div class="lesson-grid">
+        <!-- Card 1 -->
+        <div class="lesson-card">
+            <div class="icon-circle">📍</div>
+            <h3>Punctuation Precision</h3>
+            <p>Master the semi-colon, the em-dash, and the Oxford comma to add sophistication to your sentences.</p>
+            <a href="grammar/punctuation.html" class="btn">Start Lesson</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="lesson-card">
+            <div class="icon-circle">⚡</div>
+            <h3>Active vs. Passive</h3>
+            <p>Learn when to use passive voice for objectivity and active voice for persuasive impact.</p>
+            <a href="grammar/active.html" class="btn">Start Lesson</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="lesson-card">
+            <div class="icon-circle">🧬</div>
+            <h3>Subject-Verb Agreement</h3>
+            <p>Avoid the most common errors that flag "amateur" writing in complex academic sentences.</p>
+            <a href="grammar/subjectverb.html" class="btn">Start Lesson</a>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <h3 style="margin-left: 15px;">Common Academic Fixes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>The Mistake</th>
+                    <th>The Elite Correction</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"The data is..."</td>
+                    <td><span class="correction">"The data are..."</span> (Data is plural)</td>
+                </tr>
+                <tr>
+                    <td>"It's impact was..."</td>
+                    <td><span class="correction">"Its impact was..."</span> (No apostrophe for possession)</td>
+                </tr>
+                <tr>
+                    <td>"I feel that..."</td>
+                    <td><span class="correction">"Evidence suggests..."</span> (Stay objective)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer style="text-align: center; margin: 60px 0; color: var(--text-muted); font-size: 0.8rem;">
+        &copy; 2024 Home of Elites | Freshman Support System
+    </footer>
+</div>
+
+</body>
+</html>

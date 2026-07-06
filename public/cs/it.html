@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Hub | preXam Elite</title>
+    <style>
+        :root {
+            --it-primary: #00bcd4;
+            --it-dark: #007086;
+            --bg-light: #f0f4f8;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-light); margin: 0; padding: 20px; }
+        .back-link { text-decoration: none; color: var(--it-dark); font-size: 14px; display: block; margin-bottom: 20px; font-weight: 500; }
+        
+        h1 { font-size: 24px; color: #1a2a3a; border-left: 5px solid var(--it-primary); padding-left: 15px; }
+
+        .collapsible {
+            background-color: #ffffff;
+            color: #333;
+            cursor: pointer;
+            padding: 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .active, .collapsible:hover { background-color: #e0f7fa; color: var(--it-dark); transform: translateY(-2px); }
+
+        .content {
+            padding: 5px 20px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 0 0 12px 12px;
+            margin-top: -15px;
+            margin-bottom: 20px;
+            border: 1px solid #e1e8ed;
+            border-top: none;
+        }
+        
+        ul, ol { padding-left: 20px; color: #445; line-height: 1.8; }
+        li strong { color: #2c3e50; }
+
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #e1e8ed;
+            border-top: 4px solid var(--it-primary);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .tag {
+            background: #00bcd422;
+            color: var(--it-dark);
+            padding: 3px 10px;
+            font-size: 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+            font-weight: 600;
+        }
+
+        .more-box { text-align: center; margin-top: 40px; }
+        
+        .more-btn {
+            border: none;
+            border-radius: 30px;
+            color: white;
+            padding: 12px 40px;
+            background: linear-gradient(135deg, var(--it-primary), var(--it-dark));
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+            transition: 0.3s;
+        }
+        .more-btn:hover { opacity: 0.9; transform: scale(1.05); }
+        .image-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+.image-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.se {
+    object-fit: cover;
+    object-position: center;
+    height: 400px;
+    width: 100%;      /* Takes full width of container */
+    max-width: 800px; /* But won't get too big on huge screens */
+    border-radius: 15px; /* Adds a modern rounded look */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Adds depth */
+}
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link">← Return to Infrastructure</a>
+    <h1>Information Technology Hub</h1>
+    <div class="image-container">
+        <img class="se" src="it.png">
+         <img class="se" src="ict.png">
+    </div>
+    <p style="color: #546e7a; font-size: 15px; margin-bottom: 25px;">Empowering organizations through modern infrastructure and cloud solutions.</p>
+
+    <button type="button" class="collapsible">1. 🌐 The IT Ecosystem <span>+</span></button>
+    <div class="content">
+        <p>Information Technology is the backbone of digital business. It focuses on the practical application of technology to support organizational needs.</p>
+        <ul>
+            <li>☁️ <strong>Cloud Infrastructure:</strong> Managing AWS, Azure, and Google Cloud environments.</li>
+            <li>📡 <strong>Network Administration:</strong> Ensuring seamless connectivity and data flow.</li>
+            <li>🛠️ <strong>Systems Integration:</strong> Making different hardwares and softwares work as one.</li>
+            <li>🎧 <strong>Technical Support:</strong> Solving complex hardware and software challenges.</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">2. 🏗️ Modern Core Domains <span>+</span></button>
+    <div class="content">
+        <ol>
+            <li><strong>☁️ Cloud Computing & Virtualization</strong>
+                <p>Moving away from physical servers to scalable virtual environments (VMs, Docker, Containers).</p>
+            </li>
+            <li><strong>🛡️ Cybersecurity Operations</strong>
+                <p>Protecting the network perimeter, managing firewalls, and responding to security incidents (SOC).</p>
+            </li>
+            <li><strong>🖥️ System Administration</strong>
+                <p>Configuring and maintaining Linux and Windows server environments for enterprise use.</p>
+            </li>
+            <li><strong>📶 Advanced Networking</strong>
+                <p>Managing routers, switches, and SD-WAN technologies to ensure 99.9% uptime.</p>
+            </li>
+            <li><strong>📱 Mobile & Wireless Tech</strong>
+                <p>Deploying enterprise Wi-Fi solutions and managing mobile device policies (MDM).</p>
+            </li>
+        </ol>
+    </div>
+
+    <button type="button" class="collapsible">3. 🛠️ The Modern IT Stack <span>+</span></button>
+    <div class="content">
+        <p>IT professionals today must be "Generalist Specialists." Essential skills include:</p>
+        <ul>
+            <li>🐍 <strong>Scripting:</strong> Using Python or PowerShell to automate boring tasks.</li>
+            <li>📦 <strong>Containerization:</strong> Understanding how Docker and Kubernetes host apps.</li>
+            <li>🔐 <strong>IAM:</strong> Identity and Access Management (Active Directory, Okta).</li>
+            <li>📊 <strong>Monitoring:</strong> Using tools like Nagios or Zabbix to track system health.</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">4. 🔬 Laboratory & Hands-on <span>+</span></button>
+    <div class="content">
+        <p>IT is 90% "doing." Students spend time in the lab on:</p>
+        <ul>
+            <li>🔌 <strong>Hardware Assembly:</strong> Configuring server racks and network cabling.</li>
+            <li>💻 <strong>Virtual Labs:</strong> Setting up virtual networks in Cisco Packet Tracer.</li>
+            <li>🐧 <strong>Linux CLI:</strong> Mastering the terminal for remote server management.</li>
+            <li>🛡️ <strong>Penetration Testing:</strong> Finding vulnerabilities before the hackers do.</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">5. 🏆 Certifications & Growth <span>+</span></button>
+    <div class="content">
+        <p>In IT, certifications are as important as degrees. Focus areas:</p>
+        <ul>
+            <li>🏅 <strong>CompTIA A+/Network+/Security+:</strong> The gold standard for entry.</li>
+            <li>🏅 <strong>CCNA:</strong> For those specializing in networking.</li>
+            <li>🏅 <strong>AWS Solutions Architect:</strong> For the cloud-bound student.</li>
+            <li>🏅 <strong>ITIL:</strong> For service management and best practices.</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">6. 🚀 Active IT Projects <span>+</span></button>
+    <div class="content">
+        <p>Check out what our IT students are deploying:</p>
+        <div class="project-card">
+            <span style="font-weight: bold; color: #1a2a3a;">Campus Mesh Wi-Fi Deployment</span>
+            <div style="margin: 8px 0;">
+                <span class="tag">Networking</span><span class="tag">IoT</span>
+            </div>
+            <p style="font-size: 14px; color: #555;">Designing a seamless mesh network to provide high-speed internet across all dormitories with zero dead zones.</p>
+        </div>
+
+        <div class="project-card">
+            <span style="font-weight: bold; color: #1a2a3a;">Automated Server Backup Bot</span>
+            <div style="margin: 8px 0;">
+                <span class="tag">Python</span><span class="tag">Cloud Storage</span>
+            </div>
+            <p style="font-size: 14px; color: #555;">A script that automatically snapshots enterprise servers every 24 hours and uploads encrypted copies to S3 buckets.</p>
+        </div>
+    </div>
+
+    <div class="more-box">
+        <a href="https://www.comptia.org/home" target="_blank">
+            <button class="more-btn">Upgrade Your IT Knowledge</button>
+        </a>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                var span = this.querySelector("span");
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    span.innerHTML = "+";
+                } else {
+                    content.style.display = "block";
+                    span.innerHTML = "-";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

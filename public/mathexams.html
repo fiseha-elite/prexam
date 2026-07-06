@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault Indexing | preXam Elite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --vault-gold: #fbbf24;
+            --vault-bg: #0f172a;
+            --vault-card: #1e293b;
+            --text-gray: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--vault-bg);
+            font-family: 'Inter', sans-serif;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .vault-container {
+            text-align: center;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        /* Animated Loader Icon */
+        .loader-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(251, 191, 36, 0.1);
+            color: var(--vault-gold);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 1px solid var(--vault-gold);
+            margin-bottom: 25px;
+        }
+
+        .code-snippet {
+            background: #000;
+            padding: 20px;
+            border-radius: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #4ade80;
+            text-align: left;
+            margin-bottom: 30px;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background: #4ade80;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .btn-back {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .btn-back:hover { color: white; }
+
+    </style>
+</head>
+<body>
+
+    <div class="vault-container">
+        <div class="loader-icon">⚙️</div>
+        <br>
+        <div class="status-badge">Vault Indexing In Progress</div>
+        
+        <h1>Exam Database Offline</h1>
+        <p style="color: var(--text-gray); font-size: 15px; margin-bottom: 30px;">
+            We are currently decrypting and verifying authentic past papers for this semester. This vault will unlock automatically once verification is complete.
+        </p>
+
+        <div class="code-snippet">
+            <div>> INITIALIZING_ARCHIVE...</div>
+            <div>> FETCHING_AAU_RESOURCES... <span style="color:var(--vault-gold)">DONE</span></div>
+            <div>> SCANNING_MIDTERMS_2024... <span style="color:var(--vault-gold)">92%</span></div>
+            <div>> SYNCING_BOT_DATABASE... <span class="cursor"></span></div>
+        </div>
+
+        <a href="javascript:history.back()" class="btn-back">← Secure Return to Dashboard</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Hub | preXam Elite</title>
+    <!-- Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --accent: #3b82f6;
+            --text-dark: #1f2937;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .back-link:hover { transform: translateX(-5px); }
+
+        /* Hero Header */
+        .hero-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .hero-section h1 {
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .hero-description {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .se-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Navigating the Future Grid */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .comp-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .comp-card strong { color: var(--primary); display: block; font-size: 1.1rem; }
+        .comp-card em { font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 8px; }
+        .comp-card p { font-size: 0.85rem; margin: 0; color: #4b5563; }
+
+        /* Department Selection Cards */
+        .section-title {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .dept-card {
+            background: white;
+            border-radius: 18px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .dept-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.1);
+        }
+
+        .icon-circle {
+            width: 45px;
+            height: 45px;
+            background: #eff6ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .dept-info b { display: block; font-size: 16px; color: var(--primary); }
+        .dept-info span { font-size: 12px; color: var(--text-muted); }
+
+        /* Mobile specific fixes */
+        @media (max-width: 600px) {
+            .image-gallery { grid-template-columns: 1fr; }
+            .hero-section h1 { font-size: 1.8rem; }
+            .se-img { height: 150px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="../main-page.html" class="back-link">← Return to Main Page</a>
+
+    <header class="hero-section">
+        <h1>Digital Ecosystem</h1>
+        <p class="hero-description">
+            Technology is an interconnected landscape. While every field focuses on computation, 
+            each takes a unique path to solving the challenges of tomorrow.
+        </p>
+    </header>
+
+    <div class="image-gallery">
+        <img src="scifimarineresearchlab05daz3d.jpg" alt="Research Lab" class="se-img">
+        <img src="ultimate-workstation-hightech-computer-setup-productivity-entertainment_197463-15101.jpg" alt="Workstation" class="se-img">
+    </div>
+
+    <div class="comparison-grid">
+        <div class="comp-card" style="border-left-color: #3b82f6;">
+            <strong>Computer Science</strong>
+            <em>The Architects of Logic</em>
+            <p>Focusing on theory, algorithms, and the "how" of computation.</p>
+        </div>
+        <div class="comp-card" style="border-left-color: #6f42c1;">
+            <strong>Software Engineering</strong>
+            <em>The Builders of Systems</em>
+            <p>Applying rigorous engineering to create reliable applications.</p>
+        </div>
+        <div class="comp-card" style="border-left-color: #28a745;">
+            <strong>Information Systems</strong>
+            <em>The Bridge to Business</em>
+            <p>Optimizing how organizations use data to make smart decisions.</p>
+        </div>
+        <div class="comp-card" style="border-left-color: #00bcd4;">
+            <strong>Information Technology</strong>
+            <em>The Infrastructure</em>
+            <p>Ensuring hardware, networks, and cloud stay connected.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Select Your Major</h2>
+
+    <a href="se-notes.html" class="dept-card">
+        <div class="icon-circle">⚙️</div>
+        <div class="dept-info">
+            <b>Software Engineering (SE)</b>
+            <span>Coding, Design, and Testing</span>
+        </div>
+    </a>
+
+    <a href="is-notes.html" class="dept-card">
+        <div class="icon-circle">📊</div>
+        <div class="dept-info">
+            <b>Information Systems (IS)</b>
+            <span>Database & Business Logic</span>
+        </div>
+    </a>
+
+    <a href="cs-notes.html" class="dept-card">
+        <div class="icon-circle">💻</div>
+        <div class="dept-info">
+            <b>Computer Science (CS)</b>
+            <span>Algorithms & Theory</span>
+        </div>
+    </a>
+
+    <a href="it.html" class="dept-card">
+        <div class="icon-circle">🌐</div>
+        <div class="dept-info">
+            <b>Information Technology (IT)</b>
+            <span>Systems & Network Maintenance</span>
+        </div>
+    </a>
+</div>
+
+</body>
+</html>

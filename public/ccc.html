@@ -1,0 +1,37 @@
+
+<script>
+function getGradePoint(score) {
+    if (score >= 85) return 4.0;
+    else if (score >= 80) return 3.75;
+    else if (score >= 75) return 3.5;
+    else if (score >= 70) return 3.0;
+    else if (score >= 50) return 2.0;
+    else return 0.0;
+}
+
+function calculateGPA() {
+    // Getting values from the page
+    const mScore = parseFloat(document.getElementById('mathScore').value) || 0;
+    const mCH = parseFloat(document.getElementById('mathCH').value) || 0;
+    
+    const pScore = parseFloat(document.getElementById('physScore').value) || 0;
+    const pCH = parseFloat(document.getElementById('physCH').value) || 0;
+    
+    const eScore = parseFloat(document.getElementById('engScore').value) || 0;
+    const eCH = parseFloat(document.getElementById('engCH').value) || 0;
+
+    // Logic from your C++ code
+    const totalPoints = (getGradePoint(mScore) * mCH) + 
+                        (getGradePoint(pScore) * pCH) + 
+                        (getGradePoint(eScore) * eCH);
+                        
+    const totalCH = mCH + pCH + eCH;
+
+    if (totalCH > 0) {
+        const cgpa = totalPoints / totalCH;
+        document.getElementById('result').innerHTML = "Your CGPA = " + cgpa.toFixed(2);
+    } else {
+        document.getElementById('result').innerHTML = "Enter Credit Hours!";
+    }
+}
+</script>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Exam Archive | preXam Elite</title>
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #0984e3;
+            --bg: #f0f2f5;
+            --white: #ffffff;
+            --mid-color: #0984e3;
+            --final-color: #d63031;
+            --work-color: #27ae60;
+        }
+
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            background: var(--bg); 
+            padding: 20px; 
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .container { max-width: 650px; margin: 0 auto; }
+
+        .back-btn { 
+            display: inline-flex; 
+            align-items: center;
+            margin-bottom: 25px; 
+            text-decoration: none; 
+            color: #636e72; 
+            font-size: 14px; 
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .back-btn:hover { color: var(--accent); }
+
+        h1 { color: var(--primary); font-size: 28px; margin-bottom: 8px; font-weight: 800; }
+        .subtitle { color: #636e72; font-size: 15px; margin-bottom: 30px; }
+
+        /* Section Styling */
+        .section-header {
+            font-size: 13px;
+            font-weight: 700;
+            color: #b2bec3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 25px 0 10px 5px;
+        }
+
+        .list-container { 
+            background: var(--white); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+            margin-bottom: 20px;
+        }
+
+        .list-item { 
+            display: flex; 
+            align-items: center; 
+            padding: 16px 20px; 
+            border-bottom: 1px solid #f8f9fa; 
+            text-decoration: none; 
+            color: #2d3436; 
+            transition: all 0.2s ease;
+        }
+
+        .list-item:hover { background: #f1f7ff; transform: translateX(5px); }
+        .list-item:last-child { border-bottom: none; }
+
+        .icon-box { 
+            margin-right: 15px; 
+            font-size: 20px; 
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        /* Color Coding Icons */
+        .mid-bg { background: #e3f2fd; color: var(--mid-color); }
+        .fin-bg { background: #fff5f5; color: var(--final-color); }
+        .prac-bg { background: #ebfbee; color: var(--work-color); }
+
+        .item-info { flex-grow: 1; }
+        .item-title { display: block; font-weight: 600; font-size: 15px; }
+        .item-meta { font-size: 12px; color: #b2bec3; }
+
+        .badge {
+            font-size: 10px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 800;
+            margin-left: 10px;
+        }
+        .mid-badge { background: #d1f2ff; color: #0984e3; }
+        .fin-badge { background: #ffdada; color: #d63031; }
+        .prac-badge { background: #d1ffd6; color: #27ae60; }
+
+        /* Bot Button */
+        .bot-btn { 
+            background: #0088cc; 
+            background: linear-gradient(135deg, #0088cc, #00a2ed); 
+            color: white; 
+            padding: 20px; 
+            border-radius: 18px; 
+            text-align: center; 
+            text-decoration: none; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 35px; 
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.25);
+            transition: transform 0.2s;
+        }
+        .bot-btn:hover { transform: translateY(-2px); }
+        .bot-icon { margin-right: 12px; font-size: 22px; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="main-page.html" class="back-btn">← Back to Course Selection</a>
+    <img class="img-hero" src="evd.jpg" alt="Study Success">
+    <h1>National Exam Bank</h1>
+    <p class="subtitle">Access authentic past papers and worksheets from all major Ethiopian Universities.</p>
+
+    <!-- MIDTERM SECTION -->
+    <div class="section-header">Midterm Examinations</div>
+    <div class="list-container">
+        <a href="mathexams.html" class="list-item">
+            <span class="icon-box mid-bg">📝</span>
+            <div class="item-info">
+                <span class="item-title">Freshman English Midterm</span>
+                <span class="item-meta">AAU/ASTU Style • 1.1MB</span>
+            </div>
+            <span class="badge mid-badge">Midterm</span>
+        </a>
+        <a href="mathexams.html" class="list-item">
+            <span class="icon-box mid-bg">📐</span>
+            <div class="item-info">
+                <span class="item-title">Applied Mathematics I</span>
+                <span class="item-meta">2023 Archive • 1.4MB</span>
+            </div>
+            <span class="badge mid-badge">Midterm</span>
+        </a>
+    </div>
+
+    <!-- FINAL SECTION -->
+    <div class="section-header">Final Examinations</div>
+    <div class="list-container">
+        <a href="mathexams.html" class="list-item">
+            <span class="icon-box fin-bg">🎓</span>
+            <div class="item-info">
+                <span class="item-title">General Psychology Final</span>
+                <span class="item-meta">National Exit Exam Prep • 2.1MB</span>
+            </div>
+            <span class="badge fin-badge">Final</span>
+        </a>
+        <a href="mathexams.html" class="list-item">
+            <span class="icon-box fin-bg">🧠</span>
+            <div class="item-info">
+                <span class="item-title">Critical Thinking & Logic</span>
+                <span class="item-meta">All Units • 1.8MB</span>
+            </div>
+            <span class="badge fin-badge">Final</span>
+        </a>
+    </div>
+
+    <!-- PRACTICE & WORKSHEETS -->
+    <div class="section-header">Practice & Worksheets</div>
+    <div class="list-container">
+        <a href="mathexams.html" class="list-item">
+            <span class="icon-box prac-bg">📖</span>
+            <div class="item-info">
+                <span class="item-title">Civics & Ethics Worksheet</span>
+                <span class="item-meta">Module Summary • 950KB</span>
+            </div>
+            <span class="badge prac-badge">Practice</span>
+        </a>
+        <a href="mathexams.html" class="list-item">
+            <span class="icon-box prac-bg">🧪</span>
+            <div class="item-info">
+                <span class="item-title">Biology Lab Worksheet</span>
+                <span class="item-meta">Practical Guide • 1.2MB</span>
+            </div>
+            <span class="badge prac-badge">Practice</span>
+        </a>
+    </div>
+
+    <!-- Telegram Bot -->
+    <a href="https://t.me/bmfbob_bot" class="bot-btn">
+        <span class="bot-icon">🤖</span>
+        Unlock preXam Elite Archive (Bot)
+    </a>
+
+    <p style="text-align: center; color: #b2bec3; font-size: 11px; margin-top: 30px;">
+        Updates weekly with papers from AAU, ASTU, HU, MU, and more.
+    </p>
+</div>
+
+</body>
+</html>

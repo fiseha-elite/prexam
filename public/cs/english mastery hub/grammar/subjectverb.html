@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject-Verb Agreement | Home of Elites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --subject-color: #f59e0b;
+            --verb-color: #10b981;
+            --bg: #fdfaf6;
+            --card: #ffffff;
+            --text: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .nav-header {
+            background: var(--card);
+            padding: 15px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero { text-align: center; margin-bottom: 50px; }
+
+        /* Rule Display Card */
+        .rule-display {
+            background: var(--card);
+            padding: 35px;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .highlight-s { color: var(--subject-color); font-weight: 800; border-bottom: 2px solid var(--subject-color); }
+        .highlight-v { color: var(--verb-color); font-weight: 800; border-bottom: 2px solid var(--verb-color); }
+
+        /* Interactive Quiz */
+        .quiz-container {
+            background: #1e293b;
+            color: white;
+            padding: 40px;
+            border-radius: 30px;
+            margin-top: 50px;
+        }
+
+        .sentence-box {
+            font-size: 1.4rem;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .opt-btn {
+            padding: 12px 30px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .opt-btn:hover { background: white; color: #1e293b; }
+
+        .feedback {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+            min-height: 24px;
+        }
+
+        /* Information Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .info-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 600px) {
+            .options { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-header">
+    <a href="../English.html" style="text-decoration: none; color: var(--subject-color);">← Back</a>
+    <strong>Lesson 3: The Golden Rule</strong>
+</div>
+
+<div class="container">
+    <div class="hero">
+        <h1>Subject-Verb Agreement</h1>
+        <p>A simple concept that gets complicated in academic writing. Let's master it.</p>
+    </div>
+
+    <div class="rule-display">
+        <h3>Rule: The Distraction Trap</h3>
+        <p>Don't let words that come between the subject and the verb confuse you. Mentally cross out the middle stuff.</p>
+        
+        <div style="font-size: 1.2rem; background: #f8fafc; padding: 20px; border-radius: 12px;">
+            "The <span class="highlight-s">set</span> <span style="opacity: 0.4;">of technical books</span> <span class="highlight-v">is</span> on the table."
+        </div>
+        <p style="font-size: 0.9rem; color: #64748b; margin-top: 10px;">
+            The subject is <strong>set</strong> (singular), not <em>books</em>. Therefore, the verb must be <strong>is</strong>.
+        </p>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h4>Collective Nouns</h4>
+            <p>Words like <em>Team, Faculty,</em> or <em>Committee</em> are usually singular in academic English.</p>
+        </div>
+        <div class="info-card">
+            <h4>Compound Subjects</h4>
+            <p>Subjects joined by <strong>"and"</strong> usually take a plural verb.</p>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <span style="text-transform: uppercase; font-size: 0.7rem; color: #94a3b8;">Elite Instinct Test</span>
+        <div class="sentence-box" id="quiz-q">
+            "The list of participants _______ still growing."
+        </div>
+        <div class="options">
+            <button class="opt-btn" onclick="check(true)">is</button>
+            <button class="opt-btn" onclick="check(false)">are</button>
+        </div>
+        <div id="feedback" class="feedback"></div>
+    </div>
+</div>
+
+<script>
+    function check(isCorrect) {
+        const f = document.getElementById('feedback');
+        if(isCorrect) {
+            f.innerText = "✓ Correct! 'List' is the singular subject.";
+            f.style.color = "#10b981";
+        } else {
+            f.innerText = "✗ Incorrect. Don't let 'participants' trick you!";
+            f.style.color = "#ef4444";
+        }
+    }
+</script>
+
+<footer style="text-align: center; padding: 40px; color: #64748b; font-size: 0.8rem;">
+    Home of Elites | Freshman Mastery 2024
+</footer>
+
+</body>
+</html>

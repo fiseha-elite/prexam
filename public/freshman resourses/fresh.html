@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Library | preXam</title>
+    <!-- Modern font for better readability -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: #f4f6f9; 
+            padding: 15px; 
+            margin: 0;
+            color: #2d3436;
+            -webkit-tap-highlight-color: transparent; /* Removes default mobile tap highlight */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding-bottom: 30px;
+        }
+
+        /* Improved Back Button: Touch-friendly size */
+        .back-btn { 
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 25px; 
+            text-decoration: none; 
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .back-btn:active {
+            transform: scale(0.95);
+            background-color: #f1f1f1;
+        }
+
+        h1 { 
+            color: #0984e3; 
+            font-size: clamp(22px, 5vw, 28px); /* Responsive font sizing */
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: clamp(14px, 3.5vw, 16px);
+            color: #636e72;
+            margin-bottom: 35px;
+            line-height: 1.5;
+        }
+
+        /* Mobile-first Flex Layout that shifts to Grid on bigger screens */
+        .grid { 
+            display: flex;
+            flex-direction: column;
+            gap: 25px; 
+        }
+
+        @media (min-width: 400px) {
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* Realistic Book Styling */
+        .grid-item { 
+            position: relative;
+            background: #00b894; /* First Semester Book Color */
+            padding: 40px 20px; 
+            border-radius: 8px 20px 20px 8px; /* Rounded right corners like a book */
+            text-align: center; 
+            text-decoration: none; 
+            color: white; 
+            font-weight: 700; 
+            font-size: 18px;
+            box-shadow: -5px 8px 18px rgba(0,0,0,0.15), inset 15px 0 15px rgba(0,0,0,0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px; /* Generous touch target area */
+        }
+
+        /* 3D Book Spine Effect */
+        .grid-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 12px;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 8px 0 0 8px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Subtle bookmark ribbon hanging out of the book */
+        .grid-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 25px;
+            width: 12px;
+            height: 25px;
+            background: #ff7675;
+            border-radius: 0 0 3px 3px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: height 0.2s;
+        }
+
+        /* Second Semester Book Color */
+        .second-sem {
+            background: #0984e3; 
+        }
+        
+        .second-sem::after {
+            background: #fdcb6e; /* Yellow bookmark for second sem */
+        }
+
+        /* Interactive States optimized for both hover and mobile touch */
+        @media (hover: hover) {
+            .grid-item:hover {
+                transform: translateY(-8px) rotate(1deg);
+                box-shadow: -8px 15px 25px rgba(0,0,0,0.2), inset 15px 0 15px rgba(0,0,0,0.1);
+            }
+            .grid-item:hover::after {
+                height: 32px; /* Ribbon drops down further on hover */
+            }
+        }
+
+        .grid-item:active {
+            transform: scale(0.98) translateY(2px);
+            box-shadow: -2px 4px 10px rgba(0,0,0,0.15), inset 15px 0 15px rgba(0,0,0,0.2);
+        }
+
+        .icon { 
+            font-size: 45px; 
+            display: block;
+            margin-bottom: 12px; 
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .book-text {
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 16px;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Extra Help Card Mobile Optimization */
+        .help-card {
+            margin-top: 35px; 
+            background: linear-gradient(135deg, #2c3e50, #3498db); 
+            color: white; 
+            padding: 25px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(44, 62, 80, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .help-card:active {
+            transform: scale(0.98);
+        }
+
+        .help-card-link {
+            text-decoration: none; 
+            color: white; 
+            display: block;
+        }
+
+        .help-card-content {
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .help-card-text h3 {
+            margin: 0 0 8px 0; 
+            font-size: clamp(18px, 4.5vw, 20px);
+        }
+
+        .help-card-text p {
+            margin: 0; 
+            font-size: 14px; 
+            opacity: 0.9; 
+            line-height: 1.4;
+        }
+
+        .help-card-arrow {
+            font-size: 24px;
+            flex-shrink: 0;
+            background: rgba(255,255,255,0.2);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="../main-page.html" class="back-btn">⬅ Back to Home</a>
+
+    <h1>Ethiopian Freshman Resources</h1>
+    <p class="subtitle">Select your current semester to access tailored study materials, modules, and past exams.</p>
+
+    <div class="grid">
+        <!-- First Semester Book -->
+        <a href="first.html" class="grid-item">
+            <span class="icon">📘</span>
+            <span class="book-text">First Semester</span>
+        </a>
+
+        <!-- Second Semester Book -->
+        <a href="second semister/second.html" class="grid-item second-sem">
+            <span class="icon">📙</span>
+            <span class="book-text">Second Semester</span>
+        </a>
+    </div>
+
+    <!-- Extra Help Card -->
+    <div class="help-card">
+        <a href="https://t.me/prexam_elite" class="help-card-link">
+            <div class="help-card-content">
+                <div class="help-card-text">
+                    <h3>Need Tutoring? 🎓</h3>
+                    <p>Connect with senior students for mentorship and exam preparation support on Telegram.</p>
+                </div>
+                <div class="help-card-arrow">➔</div>
+            </div>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

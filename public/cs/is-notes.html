@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IS Hub | preXam Elite</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; }
+        .back-link { text-decoration: none; color: #28a745; font-size: 14px; display: block; margin-bottom: 20px; }
+        
+        h1 { font-size: 22px; color: #333; }
+
+        .collapsible {
+            background-color: #ffffff;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .active, .collapsible:hover { background-color: #f0fff4; color: #28a745; }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        ul, ol { padding-left: 20px; color: #555; line-height: 1.6; }
+
+        .project-card {
+            background: #f9f9f9;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        .project-title { font-weight: bold; display: block; margin-bottom: 5px; color: #222; }
+
+        .tag {
+            background: #e0e0e0;
+            color: #444;
+            padding: 2px 8px;
+            font-size: 11px;
+            border-radius: 12px;
+            margin-right: 5px;
+            text-transform: uppercase;
+        }
+
+        .more-box { text-align: center; margin-top: 30px; }
+        
+        .more-btn {
+            border: 1px solid #28a745;
+            border-radius: 5px;
+            color: #ffffff;
+            height: 40px;
+            background-color: #28a745;
+            cursor: pointer;
+            width: 300px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .more-btn:hover { background-color: #218838; }
+   .image-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.se {
+    object-fit: cover;
+    object-position: center;
+    height: 400px;
+    width: 100%;      /* Takes full width of container */
+    max-width: 800px; /* But won't get too big on huge screens */
+    border-radius: 15px; /* Adds a modern rounded look */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Adds depth */
+}
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link">← Return to Infrastructure</a>
+    <h1>Information System Hub</h1>
+    <div class="image-container">
+        <img class="se" src="is.png">
+         <img class="se" src="i.png">
+    </div>
+    <p style="color: #666; font-size: 14px;">Bridging the gap between Business and Technology.</p>
+
+    <button type="button" class="collapsible">1. 📋 Understanding Information Systems <span>+</span></button>
+    <div class="content">
+        <p>Information Systems (IS) is the study of complementary networks of hardware and software that people and organizations use to collect, filter, process, create, and distribute data.</p>
+        <ul>
+            <li>🏢 <strong>Strategic Alignment:</strong> Using IT to meet business goals.</li>
+            <li>📈 <strong>Data-Driven Decisions:</strong> Turning raw data into actionable insights.</li>
+            <li>🔄 <strong>Process Optimization:</strong> Improving organizational efficiency.</li>
+            <li>👥 <strong>Socio-Technical Approach:</strong> Focusing on how people interact with tech.</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">2. 🧠 Core Study Areas <span>+</span></button>
+    <div class="content">
+        <ol type="A">
+            <li><strong>📊 Systems Analysis and Design</strong>
+                <p>Learning how to analyze business requirements and design IT solutions that solve organizational problems.</p>
+            </li>
+            <li><strong>🗄️ Database Management Systems</strong>
+                <p>Focusing on the administration, security, and architectural design of large-scale data storage.</p>
+            </li>
+            <li><strong>💼 IT Project Management</strong>
+                <p>The methodologies (Agile, Scrum, Waterfall) used to lead technical teams and deliver software on time.</p>
+            </li>
+            <li><strong>📉 Business Intelligence & Analytics</strong>
+                <p>Using tools like PowerBI, Tableau, or SQL to interpret complex data for stakeholders.</p>
+            </li>
+            <li><strong>🛡️ Information Security & Governance</strong>
+                <p>Managing risks, compliance (GDPR/ISO), and the ethical use of corporate data.</p>
+            </li>
+            <li><strong>☁️ Enterprise Architecture (ERP)</strong>
+                <p>Studying integrated systems like SAP or Oracle that manage all aspects of a business.</p>
+            </li>
+        </ol>
+    </div>
+
+    <button type="button" class="collapsible">3. 🏗️ Management Foundations <span>+</span></button>
+    <div class="content">
+        <p>Unlike pure CS, IS focuses on the management of technology. Key theoretical concepts include:</p>
+        <ul>
+            <li>📑 Information Systems Strategy</li>
+            <li>🔄 Change Management in Organizations</li>
+            <li>⚖️ IT Ethics and Policy</li>
+            <li>💰 Cost-Benefit Analysis of Systems</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">4. 🧪 Applied Laboratory Work <span>+</span></button>
+    <div class="content">
+        <p>Practical sessions in Information Systems focus on implementation and modeling:</p>
+        <ul>
+            <li>🛠️ Database modeling and SQL querying</li>
+            <li>🧩 Process mapping and Flowcharting (BPMN)</li>
+            <li>📊 Data visualization workshops</li>
+            <li>📱 Prototype designing (UI/UX for business apps)</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">5. 🎯 Skills Developed <span>+</span></button>
+    <div class="content">
+        <p>An IS degree prepares you for a "Translator" role between nerds and suits:</p>
+        <ul>
+            <li>🗣️ Stakeholder communication</li>
+            <li>🔍 Requirements gathering</li>
+            <li>📉 Statistical data analysis</li>
+            <li>🧩 Critical thinking and Business Logic</li>
+            <li>🏗️ Enterprise resource planning</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">6. 🌍 Real-World IS Projects <span>+</span></button>
+    <div class="content">
+        <p>Current student initiatives in the IS department:</p>
+        <div class="project-card">
+            <span class="project-title">Student Record Management</span>
+            <div style="margin-bottom: 10px;">
+                <span class="tag">SQL</span><span class="tag">DBMS</span>
+            </div>
+            <p class="project-desc">A centralized database system designed to manage BDU student enrollments, grades, and graduation eligibility with automated reporting.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-title">Inventory Optimization Tool</span>
+            <div style="margin-bottom: 10px;">
+                <span class="tag">Business Analytics</span><span class="tag">Excel/Python</span>
+            </div>
+            <p class="project-desc">A dashboard that predicts stock requirements for local businesses using historical sales data and trend analysis.</p>
+        </div>
+    </div>
+
+    <div class="more-box">
+        <a href="https://www.coursera.org/browse/business/information-technology-management" class="more-link">
+            <button class="more-btn">➕ More on Information Systems</button>
+        </a>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                var span = this.querySelector("span");
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    span.innerHTML = "+";
+                } else {
+                    content.style.display = "block";
+                    span.innerHTML = "-";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

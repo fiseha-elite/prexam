@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE Hub | preXam Elite</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; }
+        .back-link { text-decoration: none; color: #6f42c1; font-size: 14px; display: block; margin-bottom: 20px; }
+        
+        h1 { font-size: 22px; color: #333; }
+
+        .collapsible {
+            background-color: #ffffff;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .active, .collapsible:hover { background-color: #f3f0ff; color: #6f42c1; }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        ul, ol { padding-left: 20px; color: #555; line-height: 1.6; }
+
+        .project-card {
+            background: #f9f9f9;
+            border-left: 4px solid #6f42c1;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        .project-title { font-weight: bold; display: block; margin-bottom: 5px; color: #222; }
+
+        .tag {
+            background: #e0e0e0;
+            color: #444;
+            padding: 2px 8px;
+            font-size: 11px;
+            border-radius: 12px;
+            margin-right: 5px;
+            text-transform: uppercase;
+        }
+
+        .more-box { text-align: center; margin-top: 30px; }
+        
+        .more-btn {
+            border: 1px solid #6f42c1;
+            border-radius: 5px;
+            color: #ffffff;
+            height: 40px;
+            background-color: #6f42c1;
+            cursor: pointer;
+            width: 300px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+       .image-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.se {
+    object-fit: cover;
+    object-position: center;
+    height: 400px;
+    width: 100%;      /* Takes full width of container */
+    max-width: 800px; /* But won't get too big on huge screens */
+    border-radius: 15px; /* Adds a modern rounded look */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Adds depth */
+}
+        
+        .more-btn:hover { background-color: #5a32a3; }
+    </style>
+</head>
+<body>
+
+    <a href="Tech-dep.html" class="back-link"><button style="height: 36px; border: none; background-color: #28a745; color:#f4f7f6; border-radius: 3px;">← Back to Dep</button></a>
+    <h1>Software Engineering Hub</h1>
+    <div class="image-container">
+    <img class="se" src="se.png">
+    <img class="se" src="downloa.png">
+    </div>
+    <p style="color: #666; font-size: 14px;">Engineering high-quality software through systematic processes.</p>
+
+    <button type="button" class="collapsible">1. 🏗️ The Engineering Approach <span>+</span></button>
+    <div class="content">
+        <p>Software Engineering is more than just coding; it is the application of a disciplined, quantifiable approach to the development, operation, and maintenance of software.</p>
+        <ul>
+            <li>📏 <strong>Scalability:</strong> Designing systems that handle growth.</li>
+            <li>🛠️ <strong>Maintainability:</strong> Ensuring code can be easily updated.</li>
+            <li>✅ <strong>Reliability:</strong> Building software that doesn't fail under pressure.</li>
+            <li>⏱️ <strong>Efficiency:</strong> Optimizing resources and development time.</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">2. 🧠 Core Knowledge Areas (SWEBOK) <span>+</span></button>
+    <div class="content">
+        <ol type="A">
+            <li><strong>📋 Software Requirements</strong>
+                <p>Eliciting, analyzing, and validating what the users actually need before a single line of code is written.</p>
+            </li>
+            <li><strong>📐 Software Architecture & Design</strong>
+                <p>Creating the high-level structure of a system using Design Patterns (e.g., Singleton, Factory, MVC).</p>
+            </li>
+            <li><strong>🧪 Software Testing & QA</strong>
+                <p>Implementing Unit, Integration, and System testing to ensure the product is bug-free and meets standards.</p>
+            </li>
+            <li><strong>🔄 Software Configuration Management</strong>
+                <p>Mastering version control (Git) and managing changes in a complex codebase.</p>
+            </li>
+            <li><strong>🚀 DevOps & Deployment</strong>
+                <p>Automating the path from code to production using CI/CD pipelines.</p>
+            </li>
+        </ol>
+    </div>
+
+    <button type="button" class="collapsible">3. 🔄 The SDLC & Methodologies <span>+</span></button>
+    <div class="content">
+        <p>SE students focus on the <strong>Software Development Life Cycle</strong>. Key methodologies include:</p>
+        <ul>
+            <li>🏃 <strong>Agile & Scrum:</strong> Iterative development with frequent feedback.</li>
+            <li>🌊 <strong>Waterfall:</strong> Linear and sequential phases (best for fixed requirements).</li>
+            <li>🌀 <strong>Spiral Model:</strong> Focus on risk assessment and prototyping.</li>
+            <li>🧪 <strong>Test-Driven Development (TDD):</strong> Writing tests before writing the actual code.</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">4. 🛠️ Practical & Studio Work <span>+</span></button>
+    <div class="content">
+        <p>Software Engineering is heavily project-based. Students engage in:</p>
+        <ul>
+            <li>👥 <strong>Team Projects:</strong> Using Jira or Trello to manage tasks.</li>
+            <li>🔍 <strong>Code Reviews:</strong> Critiquing peer code for quality and security.</li>
+            <li>🏗️ <strong>System Modeling:</strong> Using UML (Unified Modeling Language) to visualize designs.</li>
+            <li>💻 <strong>Full-Stack Development:</strong> Building end-to-end applications.</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">5. 🎯 Professional Skills <span>+</span></button>
+    <div class="content">
+        <p>What sets a Software Engineer apart:</p>
+        <ul>
+            <li>🧩 <strong>Architectural Thinking:</strong> Seeing the "Big Picture."</li>
+            <li>🤝 <strong>Collaboration:</strong> Working effectively in large, multi-disciplinary teams.</li>
+            <li>📜 <strong>Documentation:</strong> Writing technical specs that others can actually read.</li>
+            <li>🛡️ <strong>Security Mindset:</strong> Designing with "Security by Design" principles.</li>
+        </ul>
+    </div>
+
+    <button type="button" class="collapsible">6. 🌍 SE Application Examples <span>+</span></button>
+    <div class="content">
+        <p>Featured Engineering Projects:</p>
+        <div class="project-card">
+            <span class="project-title">Microservices E-Commerce API</span>
+            <div style="margin-bottom: 10px;">
+                <span class="tag">Docker</span><span class="tag">Go</span><span class="tag">Kubernetes</span>
+            </div>
+            <p class="project-desc">A highly scalable backend architecture designed to handle thousands of concurrent transactions using a decoupled microservices approach.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-title">Automated QA Framework</span>
+            <div style="margin-bottom: 10px;">
+                <span class="tag">Selenium</span><span class="tag">Jenkins</span>
+            </div>
+            <p class="project-desc">A CI/CD pipeline that automatically runs over 500 regression tests every time new code is pushed to the main branch.</p>
+        </div>
+    </div>
+
+    <div class="more-box">
+        <a href="https://www.ieee.org/membership-catalog/productdetail/ret/prod49434.html" class="more-link">
+            <button class="more-btn">➕ Explore SE Standards (IEEE)</button>
+        </a>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                var span = this.querySelector("span");
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    span.innerHTML = "+";
+                } else {
+                    content.style.display = "block";
+                    span.innerHTML = "-";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
